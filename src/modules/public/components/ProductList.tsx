@@ -67,7 +67,7 @@ export const ProductList = () => {
           <Col></Col>
         </Row>
       </Container>
-      <Container className="mt-5">
+      <div className="my-5 mx-4">
         <Row>
           {search.map((item) => (
             <Col xs={12} sm={6} md={4} lg={3} key={item.id}>
@@ -75,7 +75,7 @@ export const ProductList = () => {
             </Col>
           ))}
         </Row>
-      </Container>
+      </div>
     </>
   );
 };

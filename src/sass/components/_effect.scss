@@ -1,0 +1,23 @@
+.effect {
+  padding-top: 0px;
+  margin-top: 0px;
+  position: relative;
+  &:hover .descrit {
+    display: none;
+  }
+  &:hover .link {
+    display: block;
+  }
+}
+
+.effect .link {
+  display: none;
+}
+
+.effect .link span {
+  color: black;
+  text-decoration-line: red;
+  &:hover {
+    color: rgba(0, 119, 255, 0.993);
+  }
+}

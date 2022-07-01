@@ -3,6 +3,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { Attributes, validateAttributes } from "../models";
 import { Button, Container, Form } from "react-bootstrap";
+import { TextEdit } from "./TextEdit";
 
 interface Props {
   handleForm: (data: Attributes) => void;
@@ -70,6 +71,8 @@ export const FormContainer: FC<Props> = ({ handleForm, formValues }) => {
             {errors.description && <p>{errors.description.message}</p>}
           </Form.Text>
         </Form.Group>
+
+        <TextEdit />
 
         <Form.Group className="mb-3">
           <Form.Label>View Profile</Form.Label>
