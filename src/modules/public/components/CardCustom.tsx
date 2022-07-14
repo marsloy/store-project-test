@@ -11,19 +11,34 @@ export const CardCustom: FC<Props> = ({ product }) => {
   return (
     <Card
       className=" 
+      mb-4
       effect
-    border-0
-    bg-white  
-    animate__animated animate__fadeIn
+      shadow-sm
+       border-0
+      bg-white  
+      animate__animated animate__fadeIn
     "
     >
-      <Card.Img variant="top" src={product.urlImg} />
+      <Link to="/">
+        <div className="div1">
+          <div className="img">
+            <Card.Img variant="top" src={product.urlImg} />
+          </div>
+          <div className="div2">
+            <Card.Img variant="top" src={product.urlImg2} />
+          </div>
+        </div>
+      </Link>
+
       <Card.Body>
-        <Card.Title className="text-secondary fs-6 mb-0">
-          {product.name}
-        </Card.Title>
+        <Link className="text-decoration-none" to="/">
+          <Card.Title className="fs-6 mb-0 text-name">
+            {product.name}
+          </Card.Title>
+        </Link>
         <Card.Text className="fs-6 descrit animate__animated animate__fadeIn pt-2 pb-0 mb-0">
-          $30
+          <b>$</b>
+          {product.price}
         </Card.Text>
         <div className="link animate__animated animate__fadeIn fs-6 pt-2">
           <Link to={`/product/${product.id}`}>
@@ -34,26 +49,3 @@ export const CardCustom: FC<Props> = ({ product }) => {
     </Card>
   );
 };
-
-/* 
-{!user.logged ? (
-                <Button
-                  className="text-decoration-none my-0 py-0"
-                  variant="link"
-                  onClick={handleShow}
-                >
-                  <span className="fs-4 my-0 py-0 text-secondary">
-                    <FaPowerOff />
-                  </span>
-                </Button>
-              ) : (
-                <Link
-                  className="text-decoration-none text-light my-0 py-0"
-                  to={"/admin"}
-                >
-                  <span className="fs-4 my-0 py-0 text-success">
-                    <FaPowerOff />
-                  </span>
-                </Link>
-              )}
-*/

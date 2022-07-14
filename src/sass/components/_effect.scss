@@ -16,8 +16,32 @@
 
 .effect .link span {
   color: black;
-  text-decoration-line: red;
   &:hover {
     color: rgba(0, 119, 255, 0.993);
+  }
+}
+
+////
+.div1 {
+  position: relative;
+}
+
+.div1 .div2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.div1:hover .div2 {
+  opacity: 1;
+}
+
+/////
+.text-name {
+  color: rgba(0, 0, 0, 0.63);
+  &:hover {
+    color: rgba(0, 0, 0, 0.87);
   }
 }

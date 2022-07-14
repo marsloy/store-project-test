@@ -6,9 +6,10 @@ import { FirestoreModel } from "../../../firebase/models/FirestoreModel";
 // Attributos principales del modelo
 export interface Attributes {
   urlImg: string;
+  urlImg2: string;
   name: string;
+  price: number;
   description: string;
-  urlBtnVer: string;
 }
 
 // No hace falta modificar esta interface
@@ -20,9 +21,10 @@ export interface ProductElement extends Attributes {
 export const validateAttributes = yup
   .object({
     urlImg: yup.string().required(),
+    urlImg2: yup.string().required(),
     name: yup.string().min(3).required(),
+    price: yup.string().required(),
     description: yup.string().min(3).required(),
-    urlBtnVer: yup.string().required(),
   })
   .required();
 

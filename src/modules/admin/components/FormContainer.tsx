@@ -45,6 +45,20 @@ export const FormContainer: FC<Props> = ({ handleForm, formValues }) => {
         </Form.Group>
 
         <Form.Group className="mb-3">
+          <Form.Label>Image Dos</Form.Label>
+          <Form.Control
+            type="text"
+            id="urlImg2"
+            {...register("urlImg2")}
+            placeholder="Image Dos"
+            autoComplete="off"
+          />
+          <Form.Text className="text-muted">
+            {errors.urlImg2 && <p>{errors.urlImg2.message}</p>}
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3">
           <Form.Label>Name</Form.Label>
           <Form.Control
             type="text"
@@ -59,6 +73,20 @@ export const FormContainer: FC<Props> = ({ handleForm, formValues }) => {
         </Form.Group>
 
         <Form.Group className="mb-3">
+          <Form.Label>Price</Form.Label>
+          <Form.Control
+            type="text"
+            id="price"
+            {...register("price")}
+            placeholder="Price"
+            autoComplete="off"
+          />
+          <Form.Text className="text-muted">
+            {errors.price && <p>{errors.price.message}</p>}
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3">
           <Form.Label>Description</Form.Label>
           <Form.Control
             type="text"
@@ -69,22 +97,6 @@ export const FormContainer: FC<Props> = ({ handleForm, formValues }) => {
           />
           <Form.Text className="text-muted">
             {errors.description && <p>{errors.description.message}</p>}
-          </Form.Text>
-        </Form.Group>
-
-        <TextEdit />
-
-        <Form.Group className="mb-3">
-          <Form.Label>View Profile</Form.Label>
-          <Form.Control
-            type="text"
-            id="urlBtnVer"
-            {...register("urlBtnVer")}
-            placeholder="Ver Perfil"
-            autoComplete="off"
-          />
-          <Form.Text className="text-muted">
-            {errors.urlBtnVer && <p>{errors.urlBtnVer.message}</p>}
           </Form.Text>
         </Form.Group>
 
